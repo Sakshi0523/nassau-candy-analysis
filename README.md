@@ -30,6 +30,15 @@ This analysis explores the available sales and distribution data to identify imp
 - Identify potential business growth opportunities.
 - Generate actionable insights through data visualization.
 
+# Data Files
+The project includes two datasets to demonstrate the data preparation workflow:
+
+- raw_dataset.csv: Original dataset before data cleaning and preprocessing.
+
+- cleaned_dataset.csv: Processed dataset used for exploratory data analysis and visualization.
+
+The cleaned dataset was prepared to improve data quality and ensure consistency during analysis.
+
 ## Tools & Technologies
 
 - **Python:** Data analysis and manipulation.
