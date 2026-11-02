@@ -1,105 +1,161 @@
-# Nassau Candy Distributor: Factory-to-Customer Analysis
+# 🍬 Nassau Candy Distributor – Shipping Route Efficiency Analysis
 
-**An Exploratory Data Analysis Project Using Python**
+## 📌 Project Overview
 
-## Project Overview
+This project focuses on analyzing shipping operations for Nassau Candy Distributor to evaluate delivery performance, identify inefficient shipping routes, and understand factors affecting shipment lead times.
 
-This project focuses on analyzing sales and distribution data for Nassau Candy Distributor to understand business performance, customer purchasing patterns, product sales, and distribution trends.
+Using Python, SQL, Pandas, and Streamlit, the project transforms raw shipping data into meaningful business insights through data cleaning, exploratory data analysis, and interactive visualizations.
 
-The objective is to transform raw transactional data into meaningful business insights that can support data-driven decision-making and improve overall business performance.
+The objective is to help businesses understand shipping patterns, monitor delivery delays, and identify opportunities to improve logistics efficiency.
 
-## Business Problem
+## 🎯 Business Objectives
 
-Businesses need to understand how their products perform, which customers contribute to revenue, and where opportunities for improvement exist.
+- Analyze overall shipping performance and delivery lead times.
+- Identify the fastest and slowest shipping routes.
+- Compare delivery performance across different shipping modes.
+- Evaluate state-wise shipment performance.
+- Analyze geographical variations in shipping lead times.
+- Identify delayed shipments based on a configurable delay threshold.
 
-This analysis explores the available sales and distribution data to identify important patterns, evaluate performance, and uncover potential business opportunities.
+## 🛠️ Tools & Technologies
 
-## Dataset Information
+| Tool | Purpose |
+|---|---|
+| Python | Data analysis and processing |
+| Pandas | Data cleaning and manipulation |
+| SQL | Data querying and analysis |
+| Plotly | Interactive data visualizations |
+| Streamlit | Interactive dashboard development |
+| Jupyter Notebook | Exploratory data analysis |
+| GitHub | Project documentation and version control |
 
-- **Dataset:** Nassau Candy Distributor
-- **Records:** 10,194 order lines
-- **Time Period:** January 2024 onwards (refer to the dataset for the complete date range)
-- **Format:** CSV
-
-## Objectives
-
-- Analyze overall sales and distribution performance.
-- Identify top-performing products and product categories.
-- Understand customer purchasing behavior.
-- Examine sales trends and patterns.
-- Identify potential business growth opportunities.
-- Generate actionable insights through data visualization.
-
-# Data Files
-The project includes two datasets to demonstrate the data preparation workflow:
-
-- raw_dataset.csv: Original dataset before data cleaning and preprocessing.
-
-- cleaned_dataset.csv: Processed dataset used for exploratory data analysis and visualization.
-
-The cleaned dataset was prepared to improve data quality and ensure consistency during analysis.
-
-## Tools & Technologies
-
-- **Python:** Data analysis and manipulation.
-- **Pandas:** Data cleaning and data manipulation.
-- **NumPy:** Numerical operations.
-- **Matplotlib:** Data visualization.
-- **Seaborn:** Statistical data visualization.
-- **Jupyter Notebook:** Interactive analysis and documentation.
-
-## Project Workflow
-
-1. Data Loading – Imported the dataset into Python.
-2. Data Cleaning – Inspected and handled missing values, duplicates, and data inconsistencies.
-3. Exploratory Data Analysis – Explored the dataset to understand sales and distribution patterns.
-4. Data Visualization – Created visualizations to identify trends and performance patterns.
-5. Business Insights – Interpreted the results and identified potential business opportunities.
-
-## Key Business Insights
-
-The analysis focuses on identifying:
-
-- Revenue and sales performance patterns.
-- Best-performing products and categories.
-- Customer purchasing trends.
-- Distribution and order patterns.
-- Opportunities for improving business performance.
-
-*Add your specific findings and numerical results from the completed analysis here.*
-
-## Project Structure
+## 📂 Project Structure
 
 ```text
 nassau-candy-analysis/
 │
-├── README.md
+├── data/
+│   ├── raw_dataset.csv
+│   └── cleaned.csv
+│
 ├── Nassau_Candy_Analysis.ipynb
-├── Nassau_Candy_Distributor.csv
-└── requirements.txt
+│
+├── my_app.py
+│
+├── requirements.txt
+│
+└── README.md
 ```
 
-## How to Run This Project
+## 🔍 Project Workflow
 
-1. Clone or download this repository.
-2. Install the required Python libraries.
-3. Open the Jupyter Notebook.
-4. Run the notebook cells sequentially to explore the analysis.
+### 1. Data Understanding
+- Imported and examined the raw shipping dataset.
+- Reviewed dataset structure, data types, and missing values.
+- Identified important shipping-related variables.
 
-Install dependencies using:
+### 2. Data Cleaning and Preparation
+- Handled missing and inconsistent values.
+- Converted order dates into appropriate date formats.
+- Prepared relevant columns for analysis.
+- Created calculated metrics such as shipping lead time and delivery delay indicators.
+
+### 3. Exploratory Data Analysis (EDA)
+- Analyzed shipment volumes and delivery lead times.
+- Examined shipping performance across different modes.
+- Evaluated factory-to-state shipping routes.
+- Identified geographical differences in delivery performance.
+
+### 4. Interactive Dashboard Development
+
+Developed a Streamlit dashboard with four analytical sections:
+
+**A. Shipping Route Analysis**
+- Identifies the fastest and slowest shipping routes.
+- Compares average lead times across routes.
+- Displays shipment volumes by route.
+
+**B. Shipping Mode Analysis**
+- Compares delivery lead-time distributions across shipping modes.
+- Uses box plots to understand variability and outliers.
+- Evaluates average lead time by shipping mode.
+
+**C. State-wise Drill-down**
+- Analyzes average lead time across states.
+- Compares shipment volumes by state.
+- Allows users to select individual states and explore shipment details.
+
+**D. Geographical Analysis**
+- Visualizes state-wise shipping performance using an interactive US map.
+- Allows users to switch between average lead time, delay percentage, and shipment volume.
+
+## 📊 Key Performance Indicators
+
+The dashboard includes the following performance metrics:
+
+- **Total Shipments:** Number of shipment records in the selected dataset.
+- **Average Lead Time:** Average number of days taken for shipments.
+- **Delay Percentage:** Percentage of shipments exceeding the selected delay threshold.
+
+The dashboard also provides interactive filters for:
+- Shipping mode
+- Region
+- State
+- Order date range
+- Delay threshold
+
+## 💡 Business Value
+
+This analysis can help businesses:
+
+- Identify routes with longer delivery lead times.
+- Understand differences in shipping mode performance.
+- Monitor geographical variations in delivery efficiency.
+- Track delivery delays using configurable thresholds.
+- Support data-driven logistics and operational decisions.
+
+## 🚀 Running the Streamlit Dashboard
+
+### Step 1: Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### Step 2: Navigate to the Project Folder
+
+```bash
+cd nassau-candy-analysis
+```
+
+### Step 3: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Conclusion
+### Step 4: Run the Dashboard
 
-This project demonstrates the application of Python-based exploratory data analysis to understand business performance and extract meaningful insights from transactional data.
+```bash
+streamlit run my_app.py
+```
 
-It highlights the importance of data-driven decision-making in identifying trends, understanding customer behavior, and discovering opportunities for business improvement.
+The dashboard will open in your browser.
 
-## Author
+**Note:** Ensure that the cleaned dataset is available at the file path referenced in `my_app.py`.
 
-**Sakshi Zadi**
+## 📦 Requirements
 
-Aspiring Business Analyst | Data Analytics Enthusiast
+The project dependencies are listed in `requirements.txt`.
+
+## 👩‍💻 Author
+
+**Sakshi Pocham Zadi**
+
+Engineering Graduate | Aspiring Business Analyst
+
+Interested in business analytics, data-driven problem solving, and operational efficiency.
+
+---
+
+⭐ If you find this project useful, feel free to explore the repository and its analytical workflow.
