@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 st.set_page_config(layout="wide")
-df = pd.read_csv("cleaned.csv", parse_dates=["Order Date"])
+df = pd.read_csv("data/cleaned_dataset.csv", parse_dates=["Order Date"])
 
 df["Route (State)"] = df["Factory"] + " → " + df["State/Province"]
 
