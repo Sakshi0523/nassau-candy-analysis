@@ -1,1 +1,6 @@
-Added Python project dependencies
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+notebook
